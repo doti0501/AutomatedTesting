@@ -27,7 +27,7 @@ public class DemoWebTest {
 		driver.manage().window().maximize();
 	}
 	@Test
-	public void testCase1() {
+	public void Verify_user_able_to_click_Learn_more_btn() {
 		driver.getTitle();
 		//WebElement Learn_more_btn = driver.findElement(By.linkText("Learn more"));
 		//Action act = new Actions(driver);
