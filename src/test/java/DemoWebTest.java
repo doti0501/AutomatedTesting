@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,8 +21,8 @@ public class DemoWebTest {
 
 	@Before
 	public void setup(){
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
 		driver.get("https://dev.smartskip.com.au");
 		driver.manage().window().maximize();
 	}
@@ -42,14 +43,6 @@ public class DemoWebTest {
 	public void tearDown() {
 		driver.quit();
 	}
-
-
-//	public static void main (String[] args) {
-//		System.setProperty("WebDriver.chrome.driver","D:\\chromedriver.exe");
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("https://dev.smartskip.com.au");
 
 	}
 
